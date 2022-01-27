@@ -1,0 +1,66 @@
+# email from address for notifications
+EMAIL_FROM = 'your_web_app@gmail.com'
+
+# reddit config
+REDDIT_CLIENT_ID = "REDDIT_CLIENT_ID"
+REDDIT_CLIENT_SECRET = "REDDIT_CLIENT_SECRET"
+REDDIT_USERNAME = "REDDIT_USERNAME"
+REDDIT_PASSWORD = "REDDIT_PASSWORD"
+REDDIT_REDIRECT_URI = "http://localhost"
+REDDIT_USER_AGENT = "SOME USER AGENT STRING"
+
+STREAM_RETRY_DELAY = 30
+
+SUBREDDITS = [
+    # 'gunaccessoriesforsale',
+    'UbiquitiInStock',
+]
+
+USER_IGNORE = [
+    'WSBVoteBot',
+    'AutoModerator',
+    'RemindMeBot',
+    'pickbot',
+]
+
+ITEMS = [
+    {
+        "Description of Item 1",
+        "email_to": [
+            "<email_to_send_notification>"
+        ],
+        "include_words": [
+            "keyword1",
+            "keyword2",
+        ],
+        "exclude_words": [
+            "keyword3",
+        ],
+    },
+    {
+        "Description of Item 1",
+        "email_to": [
+            "<email_to_send_notification>"
+        ],
+        "include_words": [
+            "keyword3",
+            "keyword4",
+        ],
+        "exclude_words": [
+            "keyword5",
+        ],
+    },
+    {
+        "Description of Item 2",
+        "email_to": [
+            "<email_to_send_notification>"
+        ],
+        "include_words": [
+            "keyword1",
+            "keyword2",
+        ],
+        "exclude_words": [
+            "keyword3",
+        ],
+    },
+]
