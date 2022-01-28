@@ -21,7 +21,6 @@ USER_IGNORE = config.USER_IGNORE
 STREAM_RETRY_DELAY = config.STREAM_RETRY_DELAY
 SUBREDDITS = config.SUBREDDITS
 ITEMS = config.ITEMS
-EMAIL_FROM = config.EMAIL_FROM
 SCOPES = ['https://www.googleapis.com/auth/gmail.send']
 
 
@@ -49,7 +48,7 @@ def get_creds():
     return service
 
 
-def create_message(sender, to, subject, message_text):
+def create_message(to, subject, message_text):
     """Create a message for an email.
 
     Args:
@@ -72,7 +71,6 @@ def create_message(sender, to, subject, message_text):
     message["References"] = message_id
 
     message['to'] = to
-    message['from'] = sender
     message['subject'] = f"{subject}"
 
     return {
@@ -88,7 +86,6 @@ def notify(data, item):
     for email in emails:
         try:
             message = create_message(
-                        EMAIL_FROM,
                         email,
                         subject,
                         content

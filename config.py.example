@@ -1,6 +1,3 @@
-# email from address for notifications
-EMAIL_FROM = 'your_web_app@gmail.com'
-
 # reddit config
 REDDIT_CLIENT_ID = "REDDIT_CLIENT_ID"
 REDDIT_CLIENT_SECRET = "REDDIT_CLIENT_SECRET"
